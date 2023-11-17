@@ -58,7 +58,7 @@ export default function Home() {
       <h2 className="text-gray-400 px-14 py-6 text-center mb-auto">
         by storing the React JSX components on the blockchain
       </h2>
-      <div className="mb-32 grid lg:max-w-5xl text-left">
+      <div className="grid lg:max-w-5xl text-left mb-auto">
         {links.map(({ url, title, description }) => (
           <a
             href={url}
