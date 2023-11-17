@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const links = [
   {
     url: "https://docs.near.org/bos",
@@ -35,12 +37,20 @@ export default function Home() {
         </h1>
         <div className="fixed bottom-0 left-0 flex h-20 w-full items-end justify-center bg-gradient-to-b backdrop-blur-2xl dark:border-neutral-800 dark:from-inherit">
           <a
-            className="flex place-items-center gap-2 p-8 lg:pointer-events-auto"
+            className="flex place-items-center items-center gap-2 p-8 lg:pointer-events-auto"
             href="https://near.org?utm_source=reactonchain.dev"
             target="_blank"
             rel="noopener noreferrer"
           >
             <span className="text-gray-400">powered by</span>{" "}
+            <Image
+              src="/near-logo.svg"
+              alt="NEAR Logo"
+              className="dark:invert"
+              width={16}
+              height={16}
+              priority
+            />
             <span className="text-[#07EB97]">NEAR Protocol</span>
           </a>
         </div>
