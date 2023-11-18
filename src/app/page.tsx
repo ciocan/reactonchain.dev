@@ -1,6 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const links = [
+  {
+    url: "https://shard.dog/ethistanbul",
+    title: "Start Hackin' here",
+    description: "Get your near wallet and some free tokens to get you started",
+  },
   {
     url: "https://docs.near.org/bos",
     title: "Dev Resources",
@@ -33,7 +39,7 @@ export default function Home() {
             <span className="">OnChain</span>
             <span className="text-black font-bold">.dev</span>
           </span>
-          <span className="text-black">decentralize the frontend</span>
+          <span className="text-black text-lg">decentralize the frontend</span>
         </h1>
         <div className="fixed bottom-0 left-0 flex h-20 w-full items-end justify-center bg-gradient-to-b backdrop-blur-2xl dark:border-neutral-800 dark:from-inherit">
           <a
@@ -55,9 +61,23 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <h2 className="text-gray-400 px-14 py-6 text-center mb-auto">
+      <h2 className="text-gray-200 px-14 py-6 text-center text-lg mb-auto">
         by storing the React JSX components on the blockchain
       </h2>
+      <div className="space-x-2 mb-2 md:mb-10 bg-yellow-200 text-black text-center p-4 mx-12 max-w-2xl text-lg">
+        <span>
+          <b>$10_000</b> in prizes for the best decentralized frontend apps built at{" "}
+          <b>ETHGlobal Istanbul.</b>
+        </span>
+        <Link
+          href="https://ethglobal.com/events/istanbul/prizes#near-protocol"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline"
+        >
+          Click here to see full details.
+        </Link>
+      </div>
       <div className="grid lg:max-w-5xl text-left mb-auto">
         {links.map(({ url, title, description }) => (
           <a
